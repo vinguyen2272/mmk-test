@@ -647,32 +647,92 @@ body {
   }
 }
 
+/* MOBILE */
 @media (max-width: 920px) {
-  .header__menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-    gap: 10px;
-  }
+  .menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
 
-  .header__menu.active {
-    display: flex;
-  }
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 
+  /* ===== HAMBURGER ===== */
   .header__hamburger {
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
   }
 
+ .header__hamburger span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  display: block;
+  transition: 0.3s ease;
+  transform-origin: center;
+}
+
+/* ===== ANIMATION ===== */
+.header__hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+  .header__menu {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 260px;
+    height: 100vh;
+    background: black;
+
+    display: flex; /* LUÔN flex */
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* khi active thì trượt ra */
+  .header__menu.active {
+    right: 0;
+  }
+
+  /* item */
   .header__menu-item {
-    margin-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .header__menu-text {
+    color: white;
   }
 
   .header__btn-group {
     gap: 10px;
     margin-top: 10px;
   }
-
 }
 
 /* Responsive mobile */

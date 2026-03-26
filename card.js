@@ -65,6 +65,7 @@ const cards = [
   },
 ];
 
+// product card
 function renderCards(container, data, start = 0, end = data.length) {
   container.innerHTML = ""; 
 
@@ -86,18 +87,18 @@ function renderCards(container, data, start = 0, end = data.length) {
     container.appendChild(card);
   }
 }
+// Render product card
 const newsContainer = document.getElementById("card-container");
 renderCards(newsContainer, cards, 0, 4); 
 
 const newsproduct= document.getElementById("card-product");
 renderCards(newsproduct, cards, 4, 12); 
 
-
+//tabs 
 function openTab(index) {
   const tabs = document.querySelectorAll('.product__tab');
   const contents = document.querySelectorAll('.product__content');
 
-  // Xóa active cũ
   tabs.forEach(tab => tab.classList.remove('product__tab--active'));
   contents.forEach(content => content.classList.remove('product__content--active'));
 
@@ -107,6 +108,7 @@ function openTab(index) {
 }
 
 
+//accordion faq
 const items = document.querySelectorAll('.faq__item');
 
 items.forEach(item => {
@@ -118,7 +120,7 @@ items.forEach(item => {
   });
 });
 
-
+//accordion footer
 const accordions = document.querySelectorAll(".footer__accordion");
 
 accordions.forEach(btn => {
@@ -127,12 +129,10 @@ accordions.forEach(btn => {
     if (window.innerWidth <= 768) {
 
       const isActive = btn.classList.contains("active");
-
-      // đóng tất cả
+    
       document.querySelectorAll(".footer__accordion").forEach(a => a.classList.remove("active"));
       document.querySelectorAll(".footer__content").forEach(c => c.classList.remove("open"));
 
-      // nếu chưa mở thì mở
       if (!isActive) {
         btn.classList.add("active");
         btn.nextElementSibling.classList.add("open");
@@ -140,4 +140,22 @@ accordions.forEach(btn => {
     }
 
   });
+});
+
+//hambuger menu
+const hamburger = document.querySelector('.header__hamburger');
+const menu = document.querySelector('.header__menu');
+const overlay = document.querySelector('.menu-overlay');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+  hamburger.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+/* click nền để đóng */
+overlay.addEventListener('click', () => {
+  menu.classList.remove('active');
+  hamburger.classList.remove('active');
+  overlay.classList.remove('active');
 });
