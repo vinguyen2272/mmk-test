@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <h1>MMKAUTO.VN</h1>
+            <span style="font-size: 1rem;">Hệ thống chăm sóc và độ xe toàn quốc</span>
+        </div>
+
+        <div class="header__btn-group">
+            <div class="header__btn"><a href="#">Danh mục</a></div>
+            <div class="header__search-box">
+                <input type="text" placeholder="Tìm kiếm..." />
+                <svg class="header__search-icon" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none" />
+                    <line x1="20" y1="20" x2="16.5" y2="16.5" stroke="currentColor" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="header__hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="header__menu">
+            <li class="header__menu-item">
+                <div class="header__menu-icon"><img src="asset/phone.svg" class="header__icon" /></div>
+                <div class="header__menu-text">Gọi mua hàng<br>08.1800.5522</div>
+            </li>
+            <li class="header__menu-item">
+                <div class="header__menu-icon"><img src="asset/map.svg" class="header__icon" /></div>
+                <div class="header__menu-text">Nhượng quyền</div>
+            </li>
+            <li class="header__menu-item">
+                <div class="header__menu-icon"><img src="asset/education.svg" class="header__icon" /></div>
+                <div class="header__menu-text">Khóa học</div>
+            </li>
+            <li class="header__menu-item">
+                <div class="header__menu-icon"><img src="asset/car.svg" class="header__icon" /></div>
+                <div class="header__menu-text">Độ xe chất</div>
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <section class="banner">
+            <div class="banner-text">
+                <h2 class="title">TRẢI NGHIỆM ĐỈNH CAO</h2>
+                <h2 class="sub-title">KHÁM PHÁ BẢN THÂN</h2>
+                <p class="banner-des">MMKAUTO VIETNAM là hệ thống trung tâm chuyên cung cấp dịch vụ chăm sóc và nâng cấp
+                    xe ô tô hàng đầu
+                    Việt Nam</p>
+                <a class="button-banner" href="">Khám phá hành trình đỉnh cao</a>
+            </div>
+            <div class="banner-img">
+                <img src="./asset/banner.png" alt="banner">
+        </section>
+        <section class="info">
+            <div class="info-img"><img src="./asset/1611287246-1.jpg" alt="img" width="100%"></div>
+            <div class="info-text">
+                <h2>THIẾT KẾ NỘI THẤT LIMOUSINE NÂNG TẦM PHONG CÁCH TRẢI NGHIỆM</h2>
+                <p>
+                    MMKAUTO VIETNAM là hệ thống trung tâm chuyên cung cấp dịch vụ chăm sóc và nâng cấp xe ô tô hàng đầu
+                    tại Việt Nam.
+                    Với hơn 10 năm cống hiến, học hỏi và phát triển, MMK ngày càng được đông đảo người yêu xe biết tới
+                    là là điểm đến
+                    hàng đầu cho khách hàng.
+                </p>
+                <div class="quote-box">
+                    <div class="quote-title">Tôi khác biệt</div>
+                    <div class="quote-desc">
+                        Sự khẳng định địa vị bản thân của mỗi chiếc xe
+                    </div>
+                    <div class="quote-author">
+                        → <span>Mạnh Đức</span> - Founder MMK
+                    </div>
+                </div>
+
+                <a class="info-link" href="#">Trải nghiệm đỉnh cao độ xe <img class="arrow" src="./asset/arrow.svg"
+                        alt="arrow"></a>
+            </div>
+
+        </section>
+        <section class="news-style">
+            <h2>
+                PHONG CÁCH LIMOUSINE
+            </h2>
+            <span>
+                KHÍ CHẤT BẤT BIẾN - ĐẲNG CẤP VĨNH VIỄN
+            </span>
+            <div id="card-container"></div>
+        </section>
+        <section class="spotlight">
+            <div class="spotlight-item"><img class="icon" src="./asset/car.svg" alt="spotlight">
+                <p class="item-number">9999</p>
+                <p class="item-text">HAPPY CAR</p>
+            </div>
+            <div class="spotlight-item"><img class="icon" src="./asset/five-stars.svg" alt="spotlight">
+                <p class="item-number">30</p>
+                <p class="item-text">AWARDS</p>
+            </div>
+            <div class="spotlight-item"><img class="icon" src="./asset/person.svg" alt="spotlight">
+                <p class="item-number">120</p>
+                <p class="item-text">COOP BRAND</p>
+            </div>
+            <div class="spotlight-item"><img class="icon" src="./asset/phonesl.svg" alt="spotlight">
+                <p class="item-number">12</p>
+                <p class="item-text">STORE MMK</p>
+            </div>
+        </section>
+        <section class="product">
+            <div class="product__tabs">
+                <div class="product__tab product__tab--active" onclick="openTab(0)">LIMOUSINE</div>
+                <div class="product__tab" onclick="openTab(1)">NỘI THẤT</div>
+                <div class="product__tab" onclick="openTab(2)">NGOẠI THẤT</div>
+                <div class="product__tab" onclick="openTab(3)">ÂM THANH</div>
+                <div class="product__tab" onclick="openTab(4)">MÀN HÌNH ANDROID</div>
+                <div class="product__tab" onclick="openTab(5)">CÁCH ÂM</div>
+            </div>
+
+            <div class="product__content product__content--active">
+                <div id="card-product">
+                    <div class="card">Card 1</div>
+                    <div class="card">Card 2</div>
+                    <div class="card">Card 3</div>
+                </div>
+            </div>
+            <div class="product__content">NỘI THẤT</div>
+            <div class="product__content">NGOẠI THẤT</div>
+            <div class="product__content">ÂM THANH</div>
+            <div class="product__content">MÀN HÌNH ANDROID</div>
+            <div class="product__content">CÁCH ÂM</div>
+        </section>
+         <section class="testimonial">
+            <div class="testimonial__wrapper">
+
+                <!-- Content -->
+                <div class="testimonial__content">
+                    <p class="testimonial__desc">
+                        Nâng Cấp Mercedes GLS 450 lên đời GSL 600 MAYBACH đang là sự lựa chọn thông minh của Chủ Xế, khi
+                        vừa được sở hữu không gian tiện ích như một chiếc GLS 600 Maybach nguyên bản mà lại vừa tiết
+                        kiệm được rất nhiều chi phí!. Hãy cùng Hãng Độ MMK nâng cấp 1 chiếc GLS 450 lên GLS 600 thì xe
+                        đẹp như thế nào nhé !
+                    </p>
+
+                    <div class="testimonial__box">
+                        <span class="quote">“</span>
+
+                        <h3 class="testimonial__title">XỨNG TẦM PHONG CÁCH</h3>
+                        <p class="testimonial__sub">
+                            Cô tiên rất ưng ý với thiết kế đặc biệt của đội ngũ MMK
+                        </p>
+
+                        <div class="testimonial__author">
+                            <img src="./asset/ava.jpg" alt="avatar">
+                            <div>
+                                <strong>Cô tiên - Cần Thơ</strong>
+                                <p>ĐỘ LIMOUSINE GSL 600 MAYBACH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="testimonial__image">
+                    <img src="./asset/banner2.jpg" alt="banner">
+                </div>
+
+            </div>
+        </section>
+         <section class="faq-container">
+            <div class="faq-img">
+                <img src="./asset/wp8545998.jpg" alt="car">
+            </div>
+            <div class="faq">
+                <h2 class="faq__title">Khách hỏi <span>MMK</span> hồi đáp</h2>
+
+                <div class="faq__item active">
+                    <button class="faq__question">
+                        MMK có chi nhánh ở Hà Nội không ?
+                        <span class="faq__icon"></span>
+                    </button>
+                    <div class="faq__answer">
+                        Chế độ bảo hành và hậu bán hàng uy tín chất lượng với thời gian bảo hành 3 năm – 5 năm – 10 năm
+                        cho các dịch vụ tuyệt vời.
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        Độ Limousine Carnival có kiểm định được không ?
+                        <span class="faq__icon"></span>
+                    </button>
+                    <div class="faq__answer">
+                        Nội dung trả lời...
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="faq__question">
+                        Có bảo hành độ ghế điện Mika 6.0 không ?
+                        <span class="faq__icon"></span>
+                    </button>
+                    <div class="faq__answer">
+                        Nội dung trả lời...
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="email">
+            <img class="icon" src="./asset/email.svg" alt="mail">
+            <p>Nhận thông tin cập nhật từ MMK</p>
+            <div class="input-wrapper">
+                <span class="icon left">✉️</span>
+                <input type="email" placeholder="Your Email" />
+                <span class="icon right">🔔</span>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div class="footer__overlay"></div>
+
+        <div class="footer__container">
+
+            <div class="footer__col">
+                <button class="footer__accordion">📍 HỆ THỐNG CỬA HÀNG</button>
+                <div class="footer__content">
+                    <p>Trụ sở chính: 552 Phạm Văn Chiêu,<br />Phường 16, Quận Gò Vấp, TP.HCM</p>
+                    <p>📞 Điện thoại: 08.1800.5522</p>
+                    <p>✉️ Email: mmkautovietnam@gmail.com</p>
+
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link">f</a>
+                        <a href="#" class="footer__social-link">t</a>
+                        <a href="#" class="footer__social-link">▶</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <button class="footer__accordion">📞 TỔNG ĐÀI HỖ TRỢ</button>
+                <div class="footer__content">
+                    <p>Hotline: <span>08 1800 5522</span></p>
+                    <p>Kỹ thuật: <span>0903 762 983</span></p>
+                    <p>Bảo hành: <span>0903 762 983</span></p>
+                    <p>Nhượng quyền: <span>096 128 6666</span></p>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <button class="footer__accordion">👤 VỀ CHÚNG TÔI</button>
+                <div class="footer__content">
+                    <p>Giao hàng, lắp đặt</p>
+                    <p>Bảo hành, đổi trả</p>
+                    <p>Hướng dẫn mua hàng</p>
+                    <p>Chính sách bảo mật thông tin</p>
+                    <p>Hướng dẫn thanh toán</p>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <button class="footer__accordion">📘 FANPAGE</button>
+                <div class="footer__content">
+
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v18.0">
+                        </script>
+
+                    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline"
+                        data-width="300" data-height="200">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+    </div>
+    <script src="./card.js"></script>
+</body>
+
+</html>
